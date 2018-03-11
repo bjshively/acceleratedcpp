@@ -1,0 +1,3 @@
+This repo contains my scratch work, exercise code, etc. as I work through Accelerated C++ by Andrew Koenig and Barbara E. Moo.
+
+Because I work on build systems at work, and I'm especially masochistic, I've opted to use the Bazel build system to compile and run the simple programs I'm writing as I work through the book, so there are BUILD and WORKSPACE files scattered throughout the directories of the repo.
