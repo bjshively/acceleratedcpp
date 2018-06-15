@@ -34,7 +34,7 @@ int main()
         cout << secondNumber;
     }
 
-    cout << " is larger.\n";
+    cout << " is larger." << endl;
 
     return 0;
 }
