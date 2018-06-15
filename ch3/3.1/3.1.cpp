@@ -21,8 +21,8 @@ int main()
 	double midterm, final;
 	cin >> midterm >> final;
 
-	cout << "Enter all of your homework grades, "
-		" followed by end-of-file: ";
+	cout << "Enter all of your homework grades,"
+	     " followed by end-of-file: ";
 
 	// ctrl+d for EOF in *nix
 
@@ -45,8 +45,8 @@ int main()
 	streamsize prec = cout.precision();
 
 	cout << "Your final grade is " << setprecision(3)
-		 << 0.2 * midterm + 0.4 * final + 0.4 * sum / count
-		 << setprecision(prec) << endl;
+	     << 0.2 * midterm + 0.4 * final + 0.4 * sum / count
+	     << setprecision(prec) << endl;
 
 	return 0;
 }
