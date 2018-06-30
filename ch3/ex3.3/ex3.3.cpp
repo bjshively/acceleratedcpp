@@ -1,17 +1,8 @@
-#include <algorithm>
-#include <iomanip>
-#include <ios>
 #include <iostream>
 #include <string>
 #include <vector>
 
-using std::cin;
-using std::cout;
-using std::endl;
-using std::setprecision;
-using std::streamsize;
-using std::string;
-using std::vector;
+using namespace std;
 
 int main() {
 
