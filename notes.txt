@@ -1,0 +1,7 @@
+=== Misc. Notes from Accelerated C++
+
+=== Chapter 4
+
+- An _lvalue_ is a value that denotes a non-temporary object, e.g. something that will be saved. The expression `sum / count` is not an lvalue (in fact, it's called an _rvalue_.) In the expression `x = sum / count`, x is an lvalue because it persists beyond this line.
+
+- 
