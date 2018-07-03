@@ -2,6 +2,12 @@
 
 === Chapter 4
 
-- An _lvalue_ is a value that denotes a non-temporary object, e.g. something that will be saved. The expression `sum / count` is not an lvalue (in fact, it's called an _rvalue_.) In the expression `x = sum / count`, x is an lvalue because it persists beyond this line.
+- An _lvalue_ is a value that denotes a non-temporary object, e.g. something that will be saved. The expression `sum / count` is not an lvalue (in fact, it's called an _rvalue_.) In the expression `x = sum / count`, x is an lvalue because it persists beyond this line. (p 56)
 
-- 
+- Three kinds of function parameters (p 58)
+	- Pass-by-value e.g. `vector<double> hw` that results in copying all of the data into a new object. This is the right thing to do if we're planning to modify the data, such as sorting a vector.
+
+	- Read only pass-by-reference e.g. `const vector<double> hw2&` that results in only a reference to the original object, and doesn't create a copy. The `&` is what signifies it is pass-by-reference and a copy should not be made. This improves performance for some complex types like strings or other objects. Use this when we don't intend to modify the original source object (which is enforced by `const`), such as when calculating the median of a vector.
+
+	- Non-read only pass-by-reference e.g. `vector<double> hw` that results in a reference to the original object that does allow us to make modifications. As above, saves the effort of copying the object
+
