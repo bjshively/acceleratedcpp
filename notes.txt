@@ -11,3 +11,21 @@
 
 	- Non-read only pass-by-reference e.g. `vector<double> hw` that results in a reference to the original object that does allow us to make modifications. As above, saves the effort of copying the object
 
+- Can define a data structure (`struct`) to hold related but disparate types of data such as a student's name and grades, and then create a vector<Student_info> to hold all of the students records together.
+
+- Structs should be defined in headers as their definitions should only be included once.
+
+- C++ (or at least the authors of Accelerated C++) seem to favor function overloading over distinctly naming functions. i.e. a function definition like double read(double homework) tells it reads homework in its signature, so there is no need to name it something like read_homework().
+
+- Header includes: When headers are included with quotes instead of brackets (e.g. #include "median.h" instead of #include <vector>), it tells the compiler to copy the entire contents of the header file into the program in place of the #include directive.
+
+- Header will contain a _declaration_ for functions in source files. Function body is replaced with a semicolon. Names of parameters are removed as they don't matter without the function body (so the head just declares the accepted signatures for each function.) (p67)
+
+- Header files should declare only the names that are necessary, so it's better to be more explicit (std::vector as a parameter) than to use the `using std::vector` syntax in a header.
+
+- Header files should ensure it is safe to include the file more than once, so use preprocessor directive guards. These should always be first in the file, even before any comments, as some implementations are optimized to check for this and skip reading the rest of the source file if possible.
+
+- Source files including their corresponding header files provides some level of protection as it lets the compiler check for consistency between function declarations and definitions.
+
+- Using the `using` syntax (i.e. `using std::vector` to shorten all other refs to `vector`) is fine within source files, as it has no effect on consumers of the functions defined within these files (unlike headers, as noted above.)
+
