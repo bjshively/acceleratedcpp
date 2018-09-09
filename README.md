@@ -6,7 +6,7 @@ Because I work on build systems at work, and I'm especially masochistic, I've op
 
 # Notes
 
-# Chapter 1 - Working with Strings
+## Chapter 1 - Working with Strings
 
 - Interface - types of operations that can be performed on a particular object (i.e. initialize, add, copy, etc.)
 
@@ -21,6 +21,8 @@ Because I work on build systems at work, and I'm especially masochistic, I've op
 - Create a string from many copies of a string with `std::string stars(10, '*');`
 
 - `cout << string` to write string to output, `cin >> string` to save input to string
+
+
 
 ## Chapter 4
 
