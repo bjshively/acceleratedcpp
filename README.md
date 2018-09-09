@@ -6,6 +6,22 @@ Because I work on build systems at work, and I'm especially masochistic, I've op
 
 # Notes
 
+# Chapter 1 - Working with Strings
+
+- Interface - types of operations that can be performed on a particular object (i.e. initialize, add, copy, etc.)
+
+- Local variables are destroyed and memory returned as soon as the block exits (closing `}`)
+
+- Strings initialize to empty/null string if you don't provide a value
+
+- Input/output are saved to a *buffer* and which is flushed when needed. This is faster/more efficient than writing char by char because it combines several write operations into one
+
+- `const` guarantees that a value won't change, can sometimes make program faster depending on where/how value is used
+
+- Create a string from many copies of a string with `std::string stars(10, '*');`
+
+- `cout << string` to write string to output, `cin >> string` to save input to string
+
 ## Chapter 4
 
 - An _lvalue_ is a value that denotes a non-temporary object, e.g. something that will be saved. The expression `sum / count` is not an lvalue (in fact, it's called an _rvalue_.) In the expression `x = sum / count`, x is an lvalue because it persists beyond this line. (p 56)
@@ -27,7 +43,7 @@ Because I work on build systems at work, and I'm especially masochistic, I've op
 
 - Header will contain a _declaration_ for functions in source files. Function body is replaced with a semicolon. Names of parameters are removed as they don't matter without the function body (so the head just declares the accepted signatures for each function.) (p67)
 
-- Header files should declare only the names that are necessary, so it's better to be more explicit (std::vector as a parameter) than to use the `using std::vector` syntax in a header.
+- Header files should declare only the names that are necessary, so it's better to be more explicit (`std::vector` as a parameter) than to use the `using std::vector` syntax in a header.
 
 - Header files should ensure it is safe to include the file more than once, so use preprocessor directive guards. These should always be first in the file, even before any comments, as some implementations are optimized to check for this and skip reading the rest of the source file if possible.
 
