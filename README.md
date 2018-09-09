@@ -42,6 +42,24 @@ for (init-statement condition; expression) {
 ```
 - `x ? y : z` - y if x is true, otherwise z
 
+## Chapter 3 - Working with batches of data
+- `<ios>` defines `streamsize`, which i/o uses to represent sizes
+- `<iomanip>` defines `setprecision` for stream manipulation
+- Use `double`, not `float`, for floating point calculations. `float` is pretty low precision in some implementations.
+- Two string literals separated only by whitespace are automatically concatenated. Ex:
+```
+cout << "Please enter your "
+	"midterm and final scores: "
+```
+- Local vars of built-in types that aren't initialized are undefined and point to whatever random garbage is in memory
+- `typedef type name;` defines a name as a synonym for type
+- `vector<T>::sizetype` provides a type guaranteed to be able to hold the number of elements in the largest possible vector
+```
+// Create a typedef (nickname) for the vector sizetype, vec_sz, and store homework's size in it
+typedef vector<double>::size_type vec_sz;
+vec_sz size = homework.size();
+```
+
 ## Chapter 4
 - An _lvalue_ is a value that denotes a non-temporary object, e.g. something that will be saved. The expression `sum / count` is not an lvalue (in fact, it's called an _rvalue_.) In the expression `x = sum / count`, x is an lvalue because it persists beyond this line. (p 56)
 - Three kinds of function parameters (p 58)
