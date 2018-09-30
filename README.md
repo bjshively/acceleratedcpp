@@ -60,7 +60,7 @@ typedef vector<double>::size_type vec_sz;
 vec_sz size = homework.size();
 ```
 
-## Chapter 4
+## Chapter 4 - Organizing programs and data
 - An _lvalue_ is a value that denotes a non-temporary object, e.g. something that will be saved. The expression `sum / count` is not an lvalue (in fact, it's called an _rvalue_.) In the expression `x = sum / count`, x is an lvalue because it persists beyond this line. (p 56)
 - Three kinds of function parameters (p 58)
 	- Pass-by-value e.g. `vector<double> hw` that results in copying all of the data into a new object. This is the right thing to do if we're planning to modify the data, such as sorting a vector.
